@@ -19,38 +19,38 @@ const eventForButton = () => {
   </div>
   <h2 class="heading-2">Rounded</h2>
   <div class="line">
-    <ElemButton label="Primary" color="primary" :rounded="true" />
-    <ElemButton label="Secondary" color="second" :rounded="true" />
-    <ElemButton label="Success" color="success" :rounded="true" />
-    <ElemButton label="Info" color="info" :rounded="true" />
-    <ElemButton label="Warning" color="warning" :rounded="true" />
-    <ElemButton label="Danger" color="danger" :rounded="true" />
+    <ElemButton label="Primary" color="primary" rounded />
+    <ElemButton label="Secondary" color="second" rounded />
+    <ElemButton label="Success" color="success" rounded />
+    <ElemButton label="Info" color="info" rounded />
+    <ElemButton label="Warning" color="warning" rounded />
+    <ElemButton label="Danger" color="danger" rounded />
   </div>
   <h2 class="heading-2">Disabled</h2>
   <div class="line">
-    <ElemButton label="Primary" color="primary" :disabled="true" />
-    <ElemButton label="Secondary" color="second" :disabled="true" />
-    <ElemButton label="Success" color="success" :disabled="true" />
-    <ElemButton label="Info" color="info" :disabled="true" />
-    <ElemButton label="Warning" color="warning" :disabled="true" />
-    <ElemButton label="Danger" color="danger" :disabled="true" />
+    <ElemButton label="Primary" color="primary" disabled />
+    <ElemButton label="Secondary" color="second" disabled />
+    <ElemButton label="Success" color="success" disabled />
+    <ElemButton label="Info" color="info" disabled />
+    <ElemButton label="Warning" color="warning" disabled />
+    <ElemButton label="Danger" color="danger" disabled />
   </div>
   <h2 class="heading-2">Outlined</h2>
   <div class="line">
-    <ElemButton label="Primary" color="primary" :outlined="true" />
-    <ElemButton label="Secondary" color="second" :outlined="true" />
-    <ElemButton label="Success" color="success" :outlined="true" />
-    <ElemButton label="Info" color="info" :outlined="true" />
-    <ElemButton label="Warning" color="warning" :outlined="true" />
-    <ElemButton label="Danger" color="danger" :outlined="true" />
+    <ElemButton label="Primary" color="primary" outlined />
+    <ElemButton label="Secondary" color="second" outlined />
+    <ElemButton label="Success" color="success" outlined />
+    <ElemButton label="Info" color="info" outlined />
+    <ElemButton label="Warning" color="warning" outlined />
+    <ElemButton label="Danger" color="danger" outlined />
   </div>
   <h2 class="heading-2">Icon</h2>
   <div class="line">
-    <ElemButton color="primary" icon="heart" :outlined="true" />
+    <ElemButton color="primary" icon="heart" outlined />
     <ElemButton color="second" icon="hand" />
-    <ElemButton color="success" icon="address-book" :outlined="true" />
+    <ElemButton color="success" icon="address-book" outlined />
     <ElemButton color="info" icon="credit-card" />
-    <ElemButton color="warning" icon="lemon" :outlined="true" />
+    <ElemButton color="warning" icon="lemon" outlined />
     <ElemButton color="danger" icon="hourglass" />
   </div>
   <h2 class="heading-2">Size</h2>
@@ -65,9 +65,6 @@ const eventForButton = () => {
   </div>
 </template>
 
-<style lang="sass" scoped>
-.line
-  display: flex
-  flex-wrap: wrap
-  margin-bottom: 20px
+<style lang="sass">
+@import '@/styles/global.sass'
 </style>
