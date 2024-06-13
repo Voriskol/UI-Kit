@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 
 defineProps({
   openSideBar: {
@@ -17,6 +17,10 @@ const links = reactive([
     name: "Button",
     href: "/button",
   },
+  {
+    name: "Checkbox",
+    href: "/checkbox",
+  }
 ]);
 </script>
 
@@ -55,5 +59,5 @@ const links = reactive([
     font-weight: bold
     margin-bottom: 10px
     &:hover
-      border-color: var(--primary-color)
+      border-color: var(--primary)
 </style>

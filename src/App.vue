@@ -27,7 +27,8 @@ function toggleMenu() {
 .content
   max-width: 1400px
   margin-left: 250px
-  padding: 30px
+  padding-left: 20px
+  padding-top: 62px
   transition: .2s
   &_full
     margin-left: 0
@@ -37,7 +38,7 @@ function toggleMenu() {
   position: fixed
   left: 0
   width: 15px
-  background: var(--primary-color)
+  background: var(--primary)
   height: 100%
   top: 62px
   z-index: 1
