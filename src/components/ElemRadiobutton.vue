@@ -13,6 +13,9 @@ const props = defineProps({
     type: String,
     default: "",
   },
+  checkedValue: {
+    type: String,
+  },
   label: {
     type: String,
     default: "",

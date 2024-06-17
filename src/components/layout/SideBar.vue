@@ -25,6 +25,10 @@ const links = reactive([
     name: "Radiobutton",
     href: "/radiobutton",
   },
+  {
+    name: "Progress",
+    href: "/progress",
+  },
 ]);
 </script>
 
