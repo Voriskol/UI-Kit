@@ -20,7 +20,11 @@ const links = reactive([
   {
     name: "Checkbox",
     href: "/checkbox",
-  }
+  },
+  {
+    name: "Radiobutton",
+    href: "/radiobutton",
+  },
 ]);
 </script>
 
