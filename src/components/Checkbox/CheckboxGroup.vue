@@ -1,46 +1,41 @@
 <script setup>
-import ElemCheckbox from "@/components/Checkbox/ElemCheckbox.vue";
+  import Checkbox from '@/components/Checkbox/Checkbox.vue'
 
-const emits = defineEmits(["update:value"]);
-const props = defineProps({
-  value: {
-    type: Array,
-    required: true,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  options: {
-    type: Array,
-    required: true,
-    validator: (value) => {
-      const hasNameKey = value.every((option) =>
-        Object.keys(option).includes("name")
-      );
-      const hasIdKey = value.every((option) =>
-        Object.keys(option).includes("id")
-      );
-
-      return hasNameKey && hasIdKey;
+  const emit = defineEmits(['update:value'])
+  const props = defineProps({
+    value: {
+      type: Array,
+      required: true
     },
-  },
-});
+    name: {
+      type: String,
+      required: true
+    },
+    options: {
+      type: Array,
+      required: true,
+      validator: (value) => {
+        const hasNameKey = value.every((option) => Object.keys(option).includes('name'))
+        const hasIdKey = value.every((option) => Object.keys(option).includes('id'))
+        return hasNameKey && hasIdKey
+      }
+    }
+  })
 
-const check = (params) => {
-  let updateValue = [...props.value];
-  if (params.checked) {
-    updateValue.push(params.optionId);
-  } else {
-    updateValue.splice(updateValue.indexOf(params.optionId), 1);
+  const check = (params) => {
+    let updateValue = [...props.value]
+    if (params.checked) {
+      updateValue.push(params.optionId)
+    } else {
+      updateValue.splice(updateValue.indexOf(params.optionId), 1)
+    }
+    emit('update:value', updateValue)
   }
-  emits("update:value", updateValue);
-};
 </script>
 
 <template>
   <div v-for="option in options" :key="option.id">
-    <ElemCheckbox
+    <checkbox
       :label="option.name"
       :id="option.id"
       :name="name"

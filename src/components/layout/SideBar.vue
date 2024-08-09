@@ -1,39 +1,27 @@
 <script setup>
-import { ref, reactive } from "vue";
+import { ref } from "vue";
 
-defineProps({
-  openSideBar: {
+const props = defineProps({
+  openSidebar: {
     type: Boolean,
     required: true,
   },
 });
 
-const links = reactive([
-  {
-    name: "Typography",
-    href: "/typography",
-  },
-  {
-    name: "Button",
-    href: "/button",
-  },
-  {
-    name: "Checkbox",
-    href: "/checkbox",
-  },
-  {
-    name: "Radiobutton",
-    href: "/radiobutton",
-  },
-  {
-    name: "Progress",
-    href: "/progress",
-  },
+const links = ref([
+  { name: "Typography", href: "/typography" },
+  { name: "Button", href: "/button" },
+  { name: "Checkbox", href: "/checkbox" },
+  { name: "Radiobutton", href: "/radiobutton" },
+  { name: "Progress", href: "/progress" },
+  { name: "Input", href: "/input" },
+  { name: "Tabs", href: "/tabs" },
+  { name: "Table", href: "/table" },
 ]);
 </script>
 
 <template>
-  <div :class="['sidebar', { sidebar_isopen: openSideBar }]">
+  <div :class="['sidebar', { sidebar_isopen: openSidebar }]">
     <router-link
       class="sidebar__link"
       v-for="link in links"
@@ -44,28 +32,31 @@ const links = reactive([
   </div>
 </template>
 
-<style lang="sass" scoped>
-.sidebar
-  left: 0
-  top: 62px
-  height: 100%
-  background: #fff
-  position: fixed
-  width: 250px
-  padding: 20px
-  transition: 0.2s
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07)
-  transform: translateX(-250px)
-  &_isopen
-    transform: translateX(0)
-  &__link
-    display: block
-    border-radius: 12px
-    padding: 10px
-    border: 2px solid #fff
-    transition: 0.2s
-    font-weight: bold
-    margin-bottom: 10px
-    &:hover
-      border-color: var(--primary)
+<style lang="scss" scoped>
+.sidebar {
+  left: 0;
+  top: 62px;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  width: 250px;
+  padding: 20px;
+  transition: 0.2s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+  transform: translateX(-250px);
+  &_isopen {
+    transform: translateX(0px);
+  }
+  &__link {
+    display: block;
+    border-radius: 12px;
+    border: 2px solid #fff;
+    transition: 0.2s;
+    font-weight: bold;
+    margin-bottom: 10px;
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
 </style>
