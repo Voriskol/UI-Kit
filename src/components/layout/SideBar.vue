@@ -49,12 +49,15 @@ const links = ref([
   }
   &__link {
     display: block;
+    padding: 5px;
+    border: 1px solid white;
     border-radius: 12px;
-    border: 2px solid #fff;
-    transition: 0.2s;
+    transition: all 0.2s;
     font-weight: bold;
     margin-bottom: 10px;
     &:hover {
+      border: 1px solid var(--primary);
+      background-color: aliceblue;
       color: var(--primary);
     }
   }
